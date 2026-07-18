@@ -13,6 +13,8 @@ import SignContract from "@/components/company/SignContract"
 
 import ContactsSkeleton from "./ContactsSkelaton"
 
+export const dynamic = 'force-dynamic';
+
 function replaceSpaceAndLowerCase(inputString) {
   const result = inputString.replace(" ", "-").toLowerCase()
   return result
