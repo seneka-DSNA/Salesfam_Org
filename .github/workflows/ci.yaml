@@ -33,7 +33,10 @@ jobs:
       - name: Type Check
         run: npm run typecheck
         continue-on-error: true
-
+      
+      - name: Write Format
+        run: npm run format:write
+        
       - name: Check Format
         run: npm run format:check
 
