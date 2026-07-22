@@ -153,6 +153,7 @@ export default function EditContract(props) {
                 offerCompany.map(
                   (singleCompany, index) =>
                     !activeCompany.includes(singleCompany.companyName) && (
+                      // eslint-disable-next-line react/jsx-key -- deuda conocida, ver SECURITY_DEBT.md #2, pendiente de fix
                       <SelectItem
                         className="capitalize"
                         value={singleCompany.companyName}

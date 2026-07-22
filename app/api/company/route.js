@@ -116,6 +116,7 @@ export async function GET(req) {
     if (companyName) {
       try {
         await connectMongoDB()
+        // SECURITY DEBT: ver SECURITY_DEBT.md #1 — companyName no saneado antes de construir el RegExp (ReDoS + regex injection)
         const company = await Company.findOne({
           companyName: { $regex: new RegExp("^" + companyName + "$", "i") },
         }).select()

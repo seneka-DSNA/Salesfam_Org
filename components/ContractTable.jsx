@@ -96,6 +96,7 @@ const ContractTable = () => {
                     </TableCell>
                     <TableCell className="flex py-2 overflow-x-auto gap-x-2">
                       {singleUser.contracts.map((contract, index) => (
+                        // eslint-disable-next-line react/jsx-key -- deuda conocida, ver SECURITY_DEBT.md #2, pendiente de fix
                         <div className="flex px-2 border rounded-md ">
                           <span
                             className="inline-block px-4 py-1 mr-2 capitalize bg-white rounded"

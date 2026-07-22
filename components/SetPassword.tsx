@@ -31,6 +31,7 @@ export default function SetPassword(props) {
       return
     }
 
+    // eslint-disable-next-line security/detect-possible-timing-attacks -- comparación de dos campos del mismo formulario, no de un secreto contra un valor almacenado
     if (password != verifyPassword) {
       console.log("The password you entered does not match")
       toast({

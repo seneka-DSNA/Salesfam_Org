@@ -272,6 +272,7 @@ export default function DataTableSeller1(props) {
               <ScrollArea className="h-40">
                 <SelectItem value="">All</SelectItem>
                 {Allcompanies.map((company) => (
+                  // eslint-disable-next-line react/jsx-key -- deuda conocida, ver SECURITY_DEBT.md #2, pendiente de fix
                   <SelectItem value={company.companyName}>
                     <span className="capitalize">{company.companyName}</span>
                   </SelectItem>

@@ -20,6 +20,7 @@ const TabComponent = ({ tabs }) => {
           </div>
         ))}
       </div>
+      {/* eslint-disable-next-line security/detect-object-injection -- activeTab solo puede ser un índice generado por el propio .map() sobre tabs, nunca input externo */}
       <div className="tab-content">{tabs[activeTab].content}</div>
       <style jsx>{`
         .tabs {
